@@ -1,7 +1,8 @@
-# from win10toast import ToastNotifier
 import os
 import time
 import sys
+from win10toast import ToastNotifier
+
 
 path = r"D:\CODE\SurvCamFileRemover\testDirectory"
 
@@ -15,5 +16,6 @@ for f in os.listdir(path):
         if os.path.isfile(f):
             os.remove(os.path.join(path, f))
 
-# toaster = ToastNotifier()
-# toaster.show_toast("Surveillance", str(file_count) + " files deleted", duration=10)
+toaster = ToastNotifier()
+toaster.show_toast("Surveillance", str(file_count) +
+                   " files deleted", duration=10)
